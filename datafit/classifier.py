@@ -29,7 +29,7 @@ class DataClassifier(object):
                 value = score(self.data, dist).value()
             except Exception:
                 continue
-            if math.isnan(value) or math.isinf(value) or value < 0:
+            if math.isnan(value) or math.isinf(value):
                 continue
             score_vals.append((dist_str, value))
             
